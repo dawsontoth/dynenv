@@ -1,0 +1,17 @@
+{
+	"name": "dynenv",
+	"keywords": [
+		"dotenv"
+	],
+	"author": "Dawson Toth",
+	"homepage": ".",
+	"version": "1.0.0",
+	"license": "",
+	"repository": "github:dawsontoth/dynenv",
+	"main": "index.js",
+	"bin": {
+		"dynenv": "./index.js"
+	},
+	"scripts": {
+	}
+}
