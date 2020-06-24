@@ -5,7 +5,7 @@
 	],
 	"author": "Dawson Toth",
 	"homepage": ".",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "",
 	"repository": "github:dawsontoth/dynenv",
 	"main": "index.js",
