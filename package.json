@@ -1,11 +1,12 @@
 {
+	"version": "1.1.0",
 	"name": "dynenv",
+	"description": "Dynamically loads environment variables from modules and then spawns a child process with them",
+	"author": "Dawson Toth",
 	"keywords": [
 		"dotenv"
 	],
-	"author": "Dawson Toth",
 	"homepage": ".",
-	"version": "1.0.1",
 	"license": "",
 	"repository": "github:dawsontoth/dynenv",
 	"main": "index.js",
