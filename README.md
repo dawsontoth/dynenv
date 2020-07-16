@@ -37,3 +37,15 @@ Now put everything together in your `package.json` by invoking `dynenv`!
 
 Everything before the `--` will be one-by-one required and given the opportunity to augment the environment. Then, whatever comes after
 will be spawned with the newly populated environment variables!
+
+### Usage in Third Party Modules
+
+If you are crafting a module that can inject environment variables through dynenv, instead of forcing clients to reference a particular file in their call to `dynenv`, you can modify your package.json to point at that file. dynenv will find and invoke your script automatically.
+
+```
+{
+  ...
+  "dynenv": "build/cli/index.js",
+  ...
+}
+```
