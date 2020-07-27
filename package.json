@@ -15,7 +15,6 @@
 	},
 	"scripts": {},
 	"dependencies": {
-		"@semantic-release/commit-analyzer": "^8.0.1",
 		"cross-spawn": "^7.0.3"
 	},
 	"devDependencies": {
