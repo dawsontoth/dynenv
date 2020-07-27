@@ -13,6 +13,8 @@
 	"bin": {
 		"dynenv": "./index.js"
 	},
-	"scripts": {
+	"scripts": {},
+	"dependencies": {
+		"cross-spawn": "^7.0.3"
 	}
 }
