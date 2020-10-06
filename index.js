@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const spawn = require('cross-spawn');
 const { readdir } = require('fs');
-const { join, resolve } = require('path');
+const { join, resolve, sep } = require('path');
 
 parseArgs()
 	.then(state => requireFiles(state))
@@ -13,7 +13,7 @@ async function parseArgs() {
 	const barrier = args.indexOf('--');
 	if (-1 === barrier) {
 		const modules = await listDirectory('./node_modules/');
-		for (const parentDirectory of modules.filter(m => m.indexOf('/@') >= 0)) {
+		for (const parentDirectory of modules.filter(m => m.indexOf(`${sep}@`) >= 0)) {
 			modules.push(...await listDirectory(parentDirectory));
 		}
 		const filesToRequire = [];
