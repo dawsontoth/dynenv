@@ -5,7 +5,7 @@ const { join, resolve, sep } = require('path');
 
 parseArgs()
 	.then(state => requireFiles(state))
-	.then(state => spawnNextCommand(state))
+	.then(state => process.exitCode = spawnNextCommand(state).status)
 ;
 
 async function parseArgs() {
@@ -73,7 +73,7 @@ function safeRequire(ref) {
 }
 
 function spawnNextCommand({ nextCommand, nextCommandArgs, env }) {
-	spawn(nextCommand, nextCommandArgs, {
+	return spawn.sync(nextCommand, nextCommandArgs, {
 		stdio: 'inherit',
 		env,
 	});
