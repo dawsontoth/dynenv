@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"@semantic-release/git": "^10.0.1",
-		"semantic-release": "^23.0.0"
+		"semantic-release": "^24.1.0"
 	},
 	"plugins": [
 		"@semantic-release/commit-analyzer",
