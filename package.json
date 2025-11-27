@@ -7,33 +7,40 @@
 		"dotenv"
 	],
 	"homepage": ".",
-	"license": "",
+	"type": "module",
+	"license": "ISC",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"tag": "latest",
+		"provenance": true
+	},
 	"repository": "github:dawsontoth/dynenv",
 	"main": "index.js",
 	"bin": {
 		"dynenv": "./index.js"
 	},
-	"scripts": {},
+	"scripts": {
+		"test": "vitest",
+		"test:ci": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
+	},
 	"dependencies": {
 		"cross-spawn": "^7.0.3"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.39.1",
+		"@semantic-release/commit-analyzer": "^13.0.1",
 		"@semantic-release/git": "^10.0.1",
-		"semantic-release": "^23.0.0"
-	},
-	"plugins": [
-		"@semantic-release/commit-analyzer",
-		"@semantic-release/release-notes-generator",
-		[
-			"@semantic-release/git",
-			{
-				"assets": [
-					"dist/**/*.{js,css}",
-					"docs",
-					"package.json"
-				],
-				"message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-			}
-		]
-	]
+		"@semantic-release/github": "^12.0.2",
+		"@semantic-release/npm": "^13.1.1",
+		"@semantic-release/release-notes-generator": "^14.1.0",
+		"@vitest/coverage-v8": "^4.0.8",
+		"conventional-changelog-conventionalcommits": "^9.1.0",
+		"eslint": "^9.39.1",
+		"globals": "^16.5.0",
+		"semantic-release": "^25.0.2",
+		"vitest": "^4.0.8"
+	}
 }

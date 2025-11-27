@@ -2,12 +2,12 @@
 
 Dynamically loads environment variables from modules and then spawns a child process with them
 
-It's like  [dotenv](https://github.com/motdotla/dotenv), but instead of .env files, you require modules!
+It's like [dotenv](https://github.com/motdotla/dotenv), but instead of .env files, you require modules!
 
 ## Usage
 
 Add `dynenv` as a dev dependency using your particular package manager:
-```json
+```sh
 npm install dynenv --save-dev
 yarn add dynenv --dev
 ```
