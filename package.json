@@ -1,5 +1,5 @@
 {
-	"version": "2.0.20",
+	"version": "2.0.21",
 	"name": "dynenv",
 	"description": "Dynamically loads environment variables from modules and then spawns a child process with them",
 	"author": "Dawson Toth",
